@@ -2,8 +2,8 @@ resource "yandex_compute_instance" "web" {
 
   count = 2
 
-  name        = "web-${count.index+1}" #Имя ВМ в облачной консоли
-  hostname    = "web-${count.index+1}" #формирует FDQN имя хоста, без hostname будет сгенрировано случаное имя.
+  name        = "web-${count.index+1}" 
+  hostname    = "web-${count.index+1}" 
   platform_id = "standard-v3"
 
   resources {
