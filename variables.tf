@@ -129,3 +129,9 @@ variable "storage" {
     fqdn        = "storage.ru-central1.internal"
   }
 }
+
+#security_vars
+
+variable "security_id" {
+  default = "enpfjh55d01i8l6n9l0p"
+}
