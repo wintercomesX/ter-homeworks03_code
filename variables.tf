@@ -75,60 +75,60 @@ variable "vms_ssh_root_key" {
 
 ###vm-variables
 
-variable "webservers" {
-  type = list(object({
-    name        = string
-    external_ip = string
-    fqdn        = string
-  }))
-
-  default = [
-    {
-      name        = "web-1"
-      external_ip = "89.169.154.134"
-      fqdn        = "web-1.ru-central1.internal"
-    },
-    {
-      name        = "web-2"
-      external_ip = "89.169.152.47"
-      fqdn        = "web-2.ru-central1.internal"
-    }
-  ]
-}
-variable "databases" {
-  type = list(object({
-    name        = string
-    external_ip = string
-    fqdn        = string
-  }))
-
-  default = [
-    {
-      name        = "main"
-      external_ip = "89.169.141.101"
-      fqdn        = "main.ru-central1.internal"
-    },
-    {
-      name        = "replica"
-      external_ip = "51.250.65.189"
-      fqdn        = "replica.ru-central1.internal"
-    }
-  ]
-}
-
-variable "storage" {
-  type = object({
-    name        = string
-    external_ip = string
-    fqdn        = string
-  })
-
-  default = {
-    name        = "storage"
-    external_ip = "51.250.14.170"
-    fqdn        = "storage.ru-central1.internal"
-  }
-}
+# variable "webservers" {
+#   type = list(object({
+#     name        = string
+#     external_ip = string
+#     fqdn        = string
+#   }))
+# 
+#   default = [
+#     {
+#       name        = "web-1"
+#       external_ip = "89.169.154.134"
+#       fqdn        = "web-1.ru-central1.internal"
+#     },
+#     {
+#       name        = "web-2"
+#       external_ip = "89.169.152.47"
+#       fqdn        = "web-2.ru-central1.internal"
+#     }
+#   ]
+# }
+# variable "databases" {
+#   type = list(object({
+#     name        = string
+#     external_ip = string
+#     fqdn        = string
+#   }))
+# 
+#   default = [
+#     {
+#       name        = "main"
+#       external_ip = "89.169.141.101"
+#       fqdn        = "main.ru-central1.internal"
+#     },
+#     {
+#       name        = "replica"
+#       external_ip = "51.250.65.189"
+#       fqdn        = "replica.ru-central1.internal"
+#     }
+#   ]
+# }
+# 
+# variable "storage" {
+#   type = object({
+#     name        = string
+#     external_ip = string
+#     fqdn        = string
+#   })
+# 
+#   default = {
+#     name        = "storage"
+#     external_ip = "51.250.14.170"
+#     fqdn        = "storage.ru-central1.internal"
+#   }
+# }
 
 #security_vars
 
