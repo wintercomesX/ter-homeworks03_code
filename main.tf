@@ -35,7 +35,7 @@ resource "yandex_compute_instance" "ubuntu" {
   network_interface {
     subnet_id = yandex_vpc_subnet.develop.id
     nat       = true
-    security_group_ids = ["enpfjh55d01i8l6n9l0p"]
+    security_group_ids = [var.security_id]
   }
 
   metadata = {
