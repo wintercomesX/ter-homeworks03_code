@@ -29,11 +29,11 @@ locals {
 }
 
 resource "local_file" "ansible_inventory" {
-  content = templatefile("${path.module}/inventory.yml.tpl", {
+  content = templatefile("${path.module}/inventory.yml", {
     webservers = local.webservers,
     databases  = local.databases,
     storages   = local.storage,
   })
 
-  filename = "/etc/homewrk2/ter-homeworks/03/src/inventory.yml"
+  filename = "/etc/homewrk2/ter-homeworks/03/src/inventory.ini"
 }
