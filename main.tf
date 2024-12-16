@@ -16,6 +16,12 @@ resource "yandex_vpc_subnet" "develop" {
 data "yandex_compute_image" "ubuntu" {
   family = var.vm_web_ubuntu
 }
+
+data "yandex_vpc_security_group" "dynamic_example" {
+  name     = "example_dynamic"
+  folder_id = var.folder_id
+}
+
 resource "yandex_compute_instance" "ubuntu" {
   name        = var.vpc_name
   platform_id = "standard-v3"
@@ -35,7 +41,7 @@ resource "yandex_compute_instance" "ubuntu" {
   network_interface {
     subnet_id = yandex_vpc_subnet.develop.id
     nat       = true
-    security_group_ids = [var.security_id]
+    security_group_ids = [data.yandex_vpc_security_group.dynamic_example.id]
   }
 
   metadata = {
