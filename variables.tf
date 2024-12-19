@@ -151,3 +151,22 @@ variable "core_fraction" {
   description = "Core fraction for the CPU"
   default     = 20
 }
+
+#boot-disk vars
+
+variable "disk_type" {
+  description = "Type of the boot disk"
+  default     = "network-hdd"
+}
+
+variable "disk_size" {
+  description = "Size of the boot disk (in GB)"
+  default     = 5
+}
+
+#preemptible_true_var
+
+variable "is_preemptible" {
+  description = "Whether the instance is preemptible"
+  default     = true
+}
