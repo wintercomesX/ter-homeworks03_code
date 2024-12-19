@@ -135,3 +135,19 @@ variable "vms_ssh_root_key" {
 variable "security_id" {
   default = "enpfjh55d01i8l6n9l0p"
 }
+
+#resource_vars
+variable "cores" {
+  description = "Number of cores per instance"
+  default     = 2
+}
+
+variable "memory" {
+  description = "Amount of memory per instance (in GB)"
+  default     = 1
+}
+
+variable "core_fraction" {
+  description = "Core fraction for the CPU"
+  default     = 20
+}
