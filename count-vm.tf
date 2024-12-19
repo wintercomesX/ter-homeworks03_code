@@ -7,9 +7,9 @@ resource "yandex_compute_instance" "web" {
   platform_id = "standard-v3"
 
   resources {
-    cores         = 2
-    memory        = 1
-    core_fraction = 20
+    cores         = var.cores
+    memory        = var.memory
+    core_fraction = var.core_fraction
   }
 
   boot_disk {
