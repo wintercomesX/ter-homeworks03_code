@@ -14,13 +14,14 @@ resource "yandex_compute_instance" "web" {
 
   boot_disk {
     initialize_params {
-      type     = "network-hdd"
-      size     = 5
+      type = var.disk_type
+      size = var.disk_size
     }
   }
 
-
-  scheduling_policy { preemptible = true }
+ scheduling_policy { 
+    preemptible = var.is_preemptible 
+  }
 
   network_interface {
     subnet_id = yandex_vpc_subnet.develop.id
